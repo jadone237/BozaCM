@@ -22,6 +22,10 @@ public class Offre {
     private String titre;
     private String description;
     private Double prix;
+    @Temporal(TemporalType.DATE)
+    private Date createdAt;
+    @Temporal(TemporalType.DATE)
+    private Date updatedAt;
 
     @Temporal(TemporalType.DATE)
     private Date dateDepart;
@@ -33,6 +37,23 @@ public class Offre {
     private List<Reservation> reservations = new ArrayList<>();
     @ManyToOne
     private Trajet trajet;
+
+    public String getName() {
+        return titre;
+    }
+
+    public void setName(String name) {
+        this.titre= name;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+
+
+    }
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 
 
 }

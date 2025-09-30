@@ -22,6 +22,7 @@ public class Trajet {
     private String depart;
     private String arrivee;
     private String duree;
+    @Temporal(TemporalType.DATE)
     private Date createdAt;
     @Temporal(TemporalType.DATE)
     private Date updatedAt;

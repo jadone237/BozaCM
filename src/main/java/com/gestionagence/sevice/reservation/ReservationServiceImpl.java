@@ -17,7 +17,7 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     public String createReservation(Reservation reservation) {
-        reservation.setDateReservation(new Date());
+        reservation.setCreatedAt(new Date());
         this.reservationRepo.save(reservation);
         return "Reservation created";
     }

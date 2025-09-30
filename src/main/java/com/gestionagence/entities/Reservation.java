@@ -23,6 +23,8 @@ public class Reservation {
     @Temporal(TemporalType.DATE)
     private Date dateReservation;
     @Temporal(TemporalType.DATE)
+    private Date createdAt;
+    @Temporal(TemporalType.DATE)
     private Date updatedAt;
 
     private String statut;
@@ -38,8 +40,8 @@ public class Reservation {
         this.nomClient= name;
     }
 
-    public void setDateReservation(Date dateReservation) {
-        this.dateReservation = dateReservation;
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
 
 
     }
