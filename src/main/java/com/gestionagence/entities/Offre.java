@@ -31,7 +31,8 @@ public class Offre {
 
     @OneToMany(mappedBy = "offre")
     private List<Reservation> reservations = new ArrayList<>();
-
+    @ManyToOne
+    private Trajet trajet;
 
 
 }

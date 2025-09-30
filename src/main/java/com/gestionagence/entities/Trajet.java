@@ -3,6 +3,9 @@ package com.gestionagence.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -18,4 +21,7 @@ public class Trajet {
     private String depart;
     private String arrivee;
     private String duree;
+
+    @OneToMany(mappedBy = "trajet")
+    private List<Offre> offres = new ArrayList<>();
 }
