@@ -9,14 +9,13 @@ import lombok.*;
 @Setter
 @ToString
 @Entity
-@Table(name = "agences")
-public class Agence {
+@Table(name = "trajets")
+public class Trajet {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String nom;
-    private String adresse;
-    private String email;
-    private String telephone;
+    private String depart;
+    private String arrivee;
+    private String duree;
 }

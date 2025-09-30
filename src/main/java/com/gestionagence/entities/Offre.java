@@ -14,8 +14,7 @@ import java.util.Date;
 @Table(name = "offres")
 public class Offre {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String titre;
