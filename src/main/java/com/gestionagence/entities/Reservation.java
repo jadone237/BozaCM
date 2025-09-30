@@ -22,9 +22,28 @@ public class Reservation {
 
     @Temporal(TemporalType.DATE)
     private Date dateReservation;
+    @Temporal(TemporalType.DATE)
+    private Date updatedAt;
 
     private String statut;
 
     @ManyToOne
     private Offre offre;
+
+    public String getName() {
+        return nomClient;
+    }
+
+    public void setName(String name) {
+        this.nomClient= name;
+    }
+
+    public void setDateReservation(Date dateReservation) {
+        this.dateReservation = dateReservation;
+
+
+    }
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 }
