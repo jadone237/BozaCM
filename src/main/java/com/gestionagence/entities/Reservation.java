@@ -24,4 +24,7 @@ public class Reservation {
     private Date dateReservation;
 
     private String statut;
+
+    @ManyToOne
+    private Offre offre;
 }
