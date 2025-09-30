@@ -1,4 +1,4 @@
 package com.gestionagence.entities;
 
-public class OffreTrajet {
+public class Offre {
 }
