@@ -3,7 +3,9 @@ package com.gestionagence.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,4 +25,9 @@ public class Offre {
 
     @Temporal(TemporalType.DATE)
     private Date dateDepart;
+
+    @ManyToOne
+    private Agence agence;
+
+   
 }

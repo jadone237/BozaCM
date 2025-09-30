@@ -3,6 +3,9 @@ package com.gestionagence.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -19,4 +22,6 @@ public class Agence {
     private String adresse;
     private String email;
     private String telephone;
+    @OneToMany(mappedBy = "agence")
+    private List<Offre> offres = new ArrayList<>();
 }
